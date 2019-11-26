@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <RadioButton fx:id="radiobuttonWriteByHand" layoutX="29.0" layoutY="79.0" mnemonicParsing="false" onAction="#isSelectedWriteByHand" text="Write by hand" />
+      <RadioButton fx:id="radiobuttonImportFromFile" layoutX="29.0" layoutY="108.0" mnemonicParsing="false" onAction="#isSelectedImportFromFile" text="Import from file" />
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="44.0" prefWidth="565.0" text="Please select how you want to check the IBAN number.&#10;By importing IBAN number from file or write by hand:" />
+      <Pane fx:id="paneWriteByHand" layoutY="142.0" prefHeight="260.0" prefWidth="600.0" visible="false">
+         <children>
+            <TextField fx:id="textfieldIBANInputByHand" layoutX="68.0" layoutY="27.0" promptText="IBAN number" />
+            <Label layoutX="31.0" layoutY="32.0" text="IBAN:" />
+            <Button fx:id="buttonIBANWrittenByHandCheck" layoutX="422.0" layoutY="193.0" mnemonicParsing="false" onAction="#onclickIBANWrittenByHandCheck" text="Check" />
+            <Button fx:id="buttonIBANWrittenByHandClear" layoutX="495.0" layoutY="193.0" mnemonicParsing="false" onAction="#onclickIBANWrittenByHandClear" text="Clear" />
+            <Label fx:id="labelFalse" layoutX="265.0" layoutY="32.0" text="false" visible="false" />
+            <Label fx:id="labelTrue" layoutX="311.0" layoutY="32.0" text="true" visible="false" />
+         </children>
+      </Pane>
+      <Pane fx:id="paneImportIBANFromFile" layoutX="-3.0" layoutY="142.0" prefHeight="260.0" prefWidth="609.0" visible="false">
+         <children>
+            <TextField fx:id="textfieldImportIBANFromFile" layoutX="14.0" layoutY="45.0" prefHeight="12.0" prefWidth="186.0" />
+            <Label layoutX="14.0" layoutY="14.0" text="Please write file directory:" />
+            <Button fx:id="buttonImportIBANFileCancel" layoutX="286.0" layoutY="45.0" mnemonicParsing="false" onAction="#onclickImportIBANFileCancel" text="Cancel" />
+            <Button fx:id="buttonImportIBANFileCheck" layoutX="214.0" layoutY="45.0" mnemonicParsing="false" onAction="#onclickImportIBANFileCheck" text="Check" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
